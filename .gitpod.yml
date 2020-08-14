@@ -9,3 +9,4 @@ vscode:
   extensions:
     - vscjava.vscode-java-pack@0.9.0:70x0ZBbqBMOBNXgG3kqVSw==
     - adashen.vscode-tomcat@0.11.1:qq+mWSZCHkrza2mPgOhorg==
+    - Pivotal.vscode-spring-boot@1.20.0:jaH7mimG3KKfktrKqHw8Kg==
