@@ -7,6 +7,10 @@
 </head>
 <body>
     
+    <jsp:useBean id="now" class="Greeter" />
+
+    <%= now %>
+
     <% 
     
         for(int i = 0; i < 10; i++) {
