@@ -6,10 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <jsp:useBean id="now" class="Greeter" />
-
-    <%= now %>
 
     <% 
     
