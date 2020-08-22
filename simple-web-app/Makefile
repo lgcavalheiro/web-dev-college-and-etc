@@ -2,7 +2,8 @@ build:
 	jar -cvf ../tomcat9/webapps/swa.war *
 
 compile:
-	javac -sourcepath src -d WEB-INF/classes WEB-INF/java/*.java
+	javac -cp com:../tomcat9/lib/servlet-api.jar -d WEB-INF/classes com/common/*.java
+	#javac -sourcepath com -d WEB-INF/classes com/common/*.java
 
 start:
 	../tomcat9/bin/catalina.sh start

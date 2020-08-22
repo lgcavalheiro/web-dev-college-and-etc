@@ -18,8 +18,13 @@ public class Greeter extends HttpServlet {
     };
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-        OutputStream out = response.getOutputStream();
-        response.setContentType("text/html");
-        out.write("<h1>Hello!</h1>".getBytes());
+        try {
+            OutputStream out = response.getOutputStream();
+            response.setContentType("text/html");
+            String greet = "<h1>" + getGreeting() + "</h1>";
+            out.write(greet.getBytes());
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
     };
 }

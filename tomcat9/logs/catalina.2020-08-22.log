@@ -1,0 +1,98 @@
+22-Aug-2020 23:02:26.257 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.37
+22-Aug-2020 23:02:26.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2020 20:09:49 UTC
+22-Aug-2020 23:02:26.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.37.0
+22-Aug-2020 23:02:26.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+22-Aug-2020 23:02:26.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.14.138+
+22-Aug-2020 23:02:26.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Aug-2020 23:02:26.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /home/gitpod/.sdkman/candidates/java/11.0.6.fx-zulu
+22-Aug-2020 23:02:26.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.6+10-LTS
+22-Aug-2020 23:02:26.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+22-Aug-2020 23:02:26.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /workspace/web-dev-college-and-etc/tomcat9
+22-Aug-2020 23:02:26.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /workspace/web-dev-college-and-etc/tomcat9
+22-Aug-2020 23:02:26.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2254m
+22-Aug-2020 23:02:26.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Aug-2020 23:02:26.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Aug-2020 23:02:26.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Aug-2020 23:02:26.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/workspace/web-dev-college-and-etc/tomcat9/conf/logging.properties
+22-Aug-2020 23:02:26.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Aug-2020 23:02:26.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+22-Aug-2020 23:02:26.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+22-Aug-2020 23:02:26.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+22-Aug-2020 23:02:26.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+22-Aug-2020 23:02:26.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/workspace/web-dev-college-and-etc/tomcat9
+22-Aug-2020 23:02:26.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/workspace/web-dev-college-and-etc/tomcat9
+22-Aug-2020 23:02:26.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/workspace/web-dev-college-and-etc/tomcat9/temp
+22-Aug-2020 23:02:26.284 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+22-Aug-2020 23:02:26.884 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:02:26.949 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1082] milliseconds
+22-Aug-2020 23:02:27.085 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Aug-2020 23:02:27.086 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.37]
+22-Aug-2020 23:02:27.111 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/workspace/web-dev-college-and-etc/tomcat9/webapps/swa.war]
+22-Aug-2020 23:02:27.147 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/swa] was found with a last modified time that did not match the associated WAR. It will be deleted.
+22-Aug-2020 23:02:27.602 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/workspace/web-dev-college-and-etc/tomcat9/webapps/swa.war] has finished in [490] ms
+22-Aug-2020 23:02:27.603 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/docs]
+22-Aug-2020 23:02:27.644 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/docs] has finished in [40] ms
+22-Aug-2020 23:02:27.644 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/host-manager]
+22-Aug-2020 23:02:27.693 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/host-manager] has finished in [49] ms
+22-Aug-2020 23:02:27.694 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/ROOT]
+22-Aug-2020 23:02:27.718 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/ROOT] has finished in [23] ms
+22-Aug-2020 23:02:27.719 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/manager]
+22-Aug-2020 23:02:27.754 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/manager] has finished in [36] ms
+22-Aug-2020 23:02:27.754 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/examples]
+22-Aug-2020 23:02:28.123 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/examples] has finished in [368] ms
+22-Aug-2020 23:02:28.132 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:02:28.164 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1214] milliseconds
+22-Aug-2020 23:04:55.260 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+22-Aug-2020 23:04:55.261 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:04:55.269 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Aug-2020 23:04:55.322 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:04:55.329 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:05:18.656 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.37
+22-Aug-2020 23:05:18.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 30 2020 20:09:49 UTC
+22-Aug-2020 23:05:18.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.37.0
+22-Aug-2020 23:05:18.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+22-Aug-2020 23:05:18.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.14.138+
+22-Aug-2020 23:05:18.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Aug-2020 23:05:18.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /home/gitpod/.sdkman/candidates/java/11.0.6.fx-zulu
+22-Aug-2020 23:05:18.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.6+10-LTS
+22-Aug-2020 23:05:18.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+22-Aug-2020 23:05:18.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /workspace/web-dev-college-and-etc/tomcat9
+22-Aug-2020 23:05:18.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /workspace/web-dev-college-and-etc/tomcat9
+22-Aug-2020 23:05:18.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2254m
+22-Aug-2020 23:05:18.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Aug-2020 23:05:18.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Aug-2020 23:05:18.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Aug-2020 23:05:18.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/workspace/web-dev-college-and-etc/tomcat9/conf/logging.properties
+22-Aug-2020 23:05:18.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Aug-2020 23:05:18.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+22-Aug-2020 23:05:18.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+22-Aug-2020 23:05:18.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+22-Aug-2020 23:05:18.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+22-Aug-2020 23:05:18.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/workspace/web-dev-college-and-etc/tomcat9
+22-Aug-2020 23:05:18.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/workspace/web-dev-college-and-etc/tomcat9
+22-Aug-2020 23:05:18.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/workspace/web-dev-college-and-etc/tomcat9/temp
+22-Aug-2020 23:05:18.681 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+22-Aug-2020 23:05:19.193 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:05:19.244 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [956] milliseconds
+22-Aug-2020 23:05:19.343 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Aug-2020 23:05:19.344 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.37]
+22-Aug-2020 23:05:19.372 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/workspace/web-dev-college-and-etc/tomcat9/webapps/swa.war]
+22-Aug-2020 23:05:19.402 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/swa] was found with a last modified time that did not match the associated WAR. It will be deleted.
+22-Aug-2020 23:05:19.811 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/workspace/web-dev-college-and-etc/tomcat9/webapps/swa.war] has finished in [439] ms
+22-Aug-2020 23:05:19.812 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/docs]
+22-Aug-2020 23:05:19.839 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/docs] has finished in [26] ms
+22-Aug-2020 23:05:19.839 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/host-manager]
+22-Aug-2020 23:05:19.876 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/host-manager] has finished in [37] ms
+22-Aug-2020 23:05:19.877 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/ROOT]
+22-Aug-2020 23:05:19.913 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/ROOT] has finished in [36] ms
+22-Aug-2020 23:05:19.914 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/manager]
+22-Aug-2020 23:05:19.953 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/manager] has finished in [38] ms
+22-Aug-2020 23:05:19.953 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/examples]
+22-Aug-2020 23:05:20.285 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/workspace/web-dev-college-and-etc/tomcat9/webapps/examples] has finished in [332] ms
+22-Aug-2020 23:05:20.295 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:05:20.321 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1075] milliseconds
+22-Aug-2020 23:06:03.274 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+22-Aug-2020 23:06:03.275 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:06:03.278 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Aug-2020 23:06:03.332 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Aug-2020 23:06:03.340 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
