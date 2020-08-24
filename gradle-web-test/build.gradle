@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'war'
+    id "com.bmuschko.tomcat" version "2.5"
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:28.2-jre'
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+
+   /*  // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina
+    compile group: 'org.apache.tomcat', name: 'tomcat-catalina', version: '10.0.0-M7' */
+
+    // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+
+    def tomcatVersion = '9.0.1'
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+           "org.apache.tomcat.embed:tomcat-embed-logging-juli:9.0.0.M6",
+           "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+}
+
+tomcat {
+    httpProtocol = 'org.apache.coyote.http11.Http11Nio2Protocol'
+    ajpProtocol  = 'org.apache.coyote.ajp.AjpNio2Protocol'
+}
