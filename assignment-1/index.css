@@ -11,6 +11,9 @@ body {
 .sub-content {
     display: grid;
     grid-template-columns: 50% 50%;
+    border: 1px solid #131313;
+    box-shadow: 4px 4px black;
+    background-color: coral;
 }
 
 .poema {
