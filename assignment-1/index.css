@@ -1,0 +1,19 @@
+body {
+    background-color: #c6c6c6;
+    color: #131313;
+}
+
+.main-content {
+    display: grid;
+    justify-content: center;
+}
+
+.sub-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.poema {
+    font-size: 1.3rem;
+    font-style: oblique;
+}
