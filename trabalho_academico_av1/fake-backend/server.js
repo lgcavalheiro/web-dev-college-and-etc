@@ -4,7 +4,7 @@ const auth = require('./auth')
 
 const server = jsonServer.create()
 const router = jsonServer.router(path.join(__dirname, 'db.json'))
-const root = path.resolve('./public/')
+const root = path.resolve('./frontend/')
 const middlewares = jsonServer.defaults([root])
 
 server.use(middlewares)
