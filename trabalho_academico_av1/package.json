@@ -1,0 +1,22 @@
+{
+  "name": "trabalho_academico_av1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend": "json-server --watch fake-backend/db.json --port 3001",
+    "serve": "node fake-backend/server.js",
+    "http": "http-server ./public",
+    "dev": "nodemon fake-backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "json-server": "^0.16.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "grades": [
+        {
+            "student_id": 2020010001,
+            "av1": {
+                "trabalho": 7.0,
+                "aps": 3.0
+            },
+            "av2": {
+                "trabalho": 8.0,
+                "aps": 2.0
+            },
+            "av3": {
+                "trabalho": 10.0
+            },
+            "status": "aprovado"
+        },
+        {
+            "student_id": 2019020001,
+            "av1": {
+                "trabalho": 7.0,
+                "aps": 3.0
+            },
+            "av2": {
+                "trabalho": 8.0,
+                "aps": 2.0
+            },
+            "av3": {
+                "trabalho": 10.0
+            },
+            "status": "aprovado"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "2020010001",
+      "name": "Alan Almeida",
+      "role": "aluno",
+      "senha": "a123"
+    },
+    {
+      "id": "2019020001",
+      "name": "Bernardo Bosch",
+      "role": "aluno",
+      "senha": "b123"
+    },
+    {
+      "id": "9999660001",
+      "name": "Zacarias Alves",
+      "role": "professor",
+      "senha": "za333"
+    },
+    {
+      "id": "2019020002",
+      "name": "Caio Cardoso",
+      "role": "aluno",
+      "senha": "c123"
+    },
+    {
+      "id": "2020010002",
+      "name": "Edgar Erinaldo",
+      "role": "aluno",
+      "senha": "e123",
+      "createdAt": 1600033063815
+    }
+  ],
+  "grades": [
+    {
+      "id": "2020010001",
+      "av1": {
+        "trabalho": 7,
+        "aps": 3
+      },
+      "av2": {
+        "trabalho": 8,
+        "aps": 2
+      },
+      "av3": {
+        "trabalho": 10
+      },
+      "status": "aprovado"
+    },
+    {
+      "id": "2019020001",
+      "av1": {
+        "trabalho": 7,
+        "aps": 3
+      },
+      "av2": {
+        "trabalho": 8,
+        "aps": 2
+      },
+      "av3": {
+        "trabalho": 10
+      },
+      "status": "aprovado"
+    }
+  ]
+}
