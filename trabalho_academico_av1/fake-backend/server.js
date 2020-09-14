@@ -12,12 +12,13 @@ server.use(jsonServer.bodyParser)
 
 server.post('/login', (req, res) => {
     if(req.body.password && req.body.id){
-        if(auth.authenticate(req.body.id, req.body.password))
-            res.redirect('/home.html');
-        else 
-            res.redirect('/login-error.html');
+        let isAuth = auth.authenticate(req.body.id, req.body.password);
+        if(isAuth){
+            res.status(200).jsonp({ role: isAuth.role, name: isAuth.name, id: isAuth.id })
+        } else
+            res.status(401).jsonp({ error: "Id e/ou senha não conferem, verifique suas credenciais e tente novamente."}) 
     } else {
-        res.redirect('/login-error.html');
+        res.status(401).jsonp({ error: "Credenciais inválidas."}) 
     }
 })
 

@@ -1,7 +1,7 @@
 module.exports.authenticate = function(id, password) {
     let users = require('./db.json')["users"];
-    users = users.find(user => { return user.id === id && user.senha === password});
+    let user = users.find(user => { return user.id === id && user.senha === password});
 
-    if(users) return true;
+    if(user) return user;
     else return false;
 }
