@@ -1,0 +1,22 @@
+:root {
+    --color1: #161616;
+    --color2: #816c61;
+    --color3: #4589ff;
+    --color4: #e94f37;
+    --color5: #f4f4f4;
+}
+
+body {
+    background: var(--color5);
+    color: var(--color1);
+}
+
+input {
+    background: var(--color3);
+    border: 1px solid var(--color1);
+}
+
+input[type=submit] {
+    background: var(--color3);
+    border: 1px solid var(--color1);
+}
