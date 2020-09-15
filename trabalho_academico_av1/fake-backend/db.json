@@ -30,38 +30,48 @@
       "role": "aluno",
       "senha": "e123",
       "createdAt": 1600033063815
+    },
+    {
+      "id": "2020010003",
+      "name": "Fernanda Fuchs",
+      "role": "aluno",
+      "senha": "f123",
+      "updateTimestamp": "9/15/2020, 12:09:55 AM"
     }
   ],
   "grades": [
     {
+      "trabalhoAV1": "7",
+      "APSAV1": "2",
+      "trabalhoAV2": "8",
+      "APSAV2": "0",
+      "trabalhoAV3": "5",
       "id": "2020010001",
-      "av1": {
-        "trabalho": 7,
-        "aps": 3
-      },
-      "av2": {
-        "trabalho": 8,
-        "aps": 2
-      },
-      "av3": {
-        "trabalho": 10
-      },
-      "status": "aprovado"
+      "status": "aprovado",
+      "updateTimestamp": "9/15/2020, 12:52:19 AM",
+      "finalGrade": "8.5"
     },
     {
+      "trabalhoAV1": "6",
+      "APSAV1": "1",
+      "trabalhoAV2": "3",
+      "APSAV2": "1",
+      "trabalhoAV3": "6",
       "id": "2019020001",
-      "av1": {
-        "trabalho": 7,
-        "aps": 3
-      },
-      "av2": {
-        "trabalho": 8,
-        "aps": 2
-      },
-      "av3": {
-        "trabalho": 10
-      },
-      "status": "aprovado"
+      "status": "reprovado",
+      "updateTimestamp": "9/15/2020, 12:54:46 AM",
+      "finalGrade": "6.5"
+    },
+    {
+      "trabalhoAV1": "7",
+      "APSAV1": "3",
+      "trabalhoAV2": "8",
+      "APSAV2": "2",
+      "trabalhoAV3": "0",
+      "id": "2020010003",
+      "status": "aprovado",
+      "updateTimestamp": "9/15/2020, 12:54:05 AM",
+      "finalGrade": "10.0"
     }
   ]
 }

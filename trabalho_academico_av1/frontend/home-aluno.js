@@ -34,22 +34,22 @@ function onSuccess(res) {
                 <tbody>
                     <tr>
                         <th>Trabalhos</th>
-                        <td>${res.av1.trabalho}</td>
-                        <td>${res.av2.trabalho}</td>
-                        <td>${res.av3.trabalho}</rd>
+                        <td>${res.trabalhoAV1}</td>
+                        <td>${res.trabalhoAV2}</td>
+                        <td>${res.trabalhoAV3}</rd>
                     </tr>
                     <tr>
                         <th>APS</th>
-                        <td>${res.av1.aps}</td>
-                        <td colspan="2">${res.av2.aps}</td>
+                        <td>${res.APSAV1}</td>
+                        <td colspan="2">${res.APSAV2}</td>
                     </tr>
                     <tr>
                         <th>Total</th>
-                        <td colspan="3">10.0</td>
+                        <td colspan="3">${res.trabalhoAV3}</td>
                     </tr>
                     <tr>
                         <th>Situação</th>
-                        <td colspan="3">Aprovado</td>
+                        <td colspan="3">${res.status}</td>
                     </tr>
                 </tbody>
             </table>
