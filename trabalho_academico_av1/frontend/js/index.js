@@ -1,6 +1,3 @@
-import './index.scss';
-import './index.html';
-
 document.loginForm.onsubmit = async (e) => {
     e.preventDefault();
     const data = new FormData(e.target);

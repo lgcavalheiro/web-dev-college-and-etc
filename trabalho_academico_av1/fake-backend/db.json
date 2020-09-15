@@ -63,15 +63,15 @@
       "finalGrade": "6.5"
     },
     {
-      "trabalhoAV1": "7",
+      "trabalhoAV1": "3",
       "APSAV1": "3",
-      "trabalhoAV2": "8",
+      "trabalhoAV2": "3",
       "APSAV2": "2",
-      "trabalhoAV3": "0",
+      "trabalhoAV3": "3",
       "id": "2020010003",
-      "status": "aprovado",
-      "updateTimestamp": "9/15/2020, 12:54:05 AM",
-      "finalGrade": "10.0"
+      "status": "reprovado",
+      "updateTimestamp": "9/15/2020, 6:33:29 PM",
+      "finalGrade": "4.5"
     }
   ]
 }

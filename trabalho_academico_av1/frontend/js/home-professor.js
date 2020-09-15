@@ -104,7 +104,7 @@ function onStudentGradeSuccess(d) {
     `
 }
 
-function showModal(id) {
+window.showModal = function(id) {
     let data = allData.find(d => { return d.id === id.toString() });
     document.getElementById('modal').style.display = 'block';
     document.querySelector('div[id=modal-content] div').innerHTML += `
@@ -166,7 +166,7 @@ function showModal(id) {
     }
 }
 
-function hideModal() {
+window.hideModal = function() {
     document.getElementById('modal').style.display = 'none';
     document.querySelector('div[id=modal-content] div').innerHTML = '';
 }

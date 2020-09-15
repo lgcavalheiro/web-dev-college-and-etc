@@ -3,9 +3,14 @@ const miniCss = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './frontend/index.js',
+    entry: {
+        entry: './frontend/entry.js',
+        index: './frontend/js/index.js',
+        "home-aluno": './frontend/js/home-aluno.js',
+        "home-professor": './frontend/js/home-professor.js',
+    },
     output: {
-        filename: 'index.js',
+        filename: '[name].js',
         path: __dirname + '/public'
     },
     plugins: [
@@ -21,7 +26,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use: ['html-loader']
+                use: ['file-loader?name=[name].[ext]']
             }
         ]
     }
