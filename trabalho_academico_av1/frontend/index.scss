@@ -1,3 +1,5 @@
+$test-color-var: #393939;
+
 :root {
     --color1: #161616;
     --color2: #816c61;
@@ -19,4 +21,13 @@ input {
 input[type=submit] {
     background: var(--color3);
     border: 1px solid var(--color1);
+}
+
+input[type=submit]:hover {
+    background: darken($test-color-var, 30);
+    border: 1px solid var(--color1);
+}
+
+.test-class {
+    background: $test-color-var;
 }
