@@ -65,13 +65,13 @@
     {
       "trabalhoAV1": "3",
       "APSAV1": "3",
-      "trabalhoAV2": "3",
+      "trabalhoAV2": "5",
       "APSAV2": "2",
-      "trabalhoAV3": "3",
+      "trabalhoAV3": "0",
       "id": "2020010003",
       "status": "reprovado",
-      "updateTimestamp": "9/15/2020, 6:33:29 PM",
-      "finalGrade": "4.5"
+      "updateTimestamp": "9/15/2020, 5:13:01 PM",
+      "finalGrade": "3.5"
     }
   ]
 }
