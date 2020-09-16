@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./frontend/html/*.html --out-dir public --target browser",
-    "build": "parcel build ./frontend/html/*.html --out-dir public",
+    "purge": "rm -rf ./public/*",
+    "dev": "parcel watch ./frontend/html/*.html --out-dir public --no-source-maps",
+    "build": "parcel build ./frontend/html/*.html --out-dir public --no-source-maps",
     "serve": "node fake-backend/server.js"
   },
   "browserslist": [
@@ -15,10 +16,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.16.1"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "json-server": "^0.16.1"
   }
 }
