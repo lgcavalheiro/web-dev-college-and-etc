@@ -2,5 +2,6 @@ node_modules/
 public/
 dist/
 .cache/
+*-OLD/
 package-lock.json
 yarn.lock
