@@ -3,5 +3,6 @@ public/
 dist/
 .cache/
 *-OLD/
+parceled/
 package-lock.json
 yarn.lock

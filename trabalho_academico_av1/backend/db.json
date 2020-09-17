@@ -107,15 +107,15 @@
       "status": "aprovado"
     },
     {
-      "id": "2020010007",
-      "trabalhoAV1": "6",
-      "APSAV1": "3",
+      "trabalhoAV1": "2",
+      "APSAV1": "1",
       "trabalhoAV2": "7",
       "APSAV2": "2",
       "trabalhoAV3": "0",
-      "updateTimestamp": "9/17/2020, 12:55:31 AM",
-      "finalGrade": "9.0",
-      "status": "aprovado"
+      "id": "2020010007",
+      "status": "reprovado",
+      "updateTimestamp": "9/17/2020, 2:23:37 AM",
+      "finalGrade": "4.5"
     }
   ]
 }

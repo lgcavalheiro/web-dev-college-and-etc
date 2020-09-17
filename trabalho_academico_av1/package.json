@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "purge": "rm -rf ./public/*",
-    "dev": "parcel watch ./frontend/html/*.html --out-dir public --no-source-maps",
-    "build": "parcel build ./frontend/html/*.html --out-dir public --no-source-maps",
-    "serve": "node fake-backend/server.js",
+    "purge": "rm -rf ./public/* ./parceled/*",
+    "dev": "parcel watch ./frontend/html/*.html --out-dir parceled --no-source-maps",
+    "build": "parcel build ./frontend/html/*.html --out-dir parceled --no-source-maps",
+    "serve": "node backend/server.js",
     "y:go": "yarn purge && yarn build && yarn serve"
   },
   "browserslist": [
@@ -21,6 +21,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-terser": "^1.4.0",
     "gulp-uglifycss": "^1.1.0",
