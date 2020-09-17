@@ -45,10 +45,10 @@
       "APSAV1": "2",
       "trabalhoAV2": "3",
       "APSAV2": "2",
-      "trabalhoAV3": "5",
+      "trabalhoAV3": "1",
       "id": "2020010001",
       "status": "aprovado",
-      "updateTimestamp": "9/15/2020, 10:36:49 PM",
+      "updateTimestamp": "9/16/2020, 11:21:27 PM",
       "finalGrade": "7.0"
     },
     {
@@ -67,11 +67,44 @@
       "APSAV1": "3",
       "trabalhoAV2": "5",
       "APSAV2": "2",
-      "trabalhoAV3": "8",
+      "trabalhoAV3": "9",
       "id": "2020010003",
       "status": "aprovado",
-      "updateTimestamp": "9/15/2020, 10:49:26 PM",
-      "finalGrade": "7.5"
+      "updateTimestamp": "9/16/2020, 11:10:07 PM",
+      "finalGrade": "8.0"
+    },
+    {
+      "id": "2020010004",
+      "trabalhoAV1": "5",
+      "APSAV1": "1",
+      "trabalhoAV2": "5",
+      "APSAV2": "2",
+      "trabalhoAV3": "5",
+      "status": "reprovado",
+      "updateTimestamp": "9/16/2020, 11:24:28 PM",
+      "finalGrade": "6.0"
+    },
+    {
+      "id": "2020010005",
+      "trabalhoAV1": "4",
+      "APSAV1": "2",
+      "trabalhoAV2": "6",
+      "APSAV2": "2",
+      "trabalhoAV3": "3",
+      "updateTimestamp": "9/16/2020, 11:30:01 PM",
+      "finalGrade": "7.0",
+      "status": "aprovado"
+    },
+    {
+      "id": "2020010006",
+      "trabalhoAV1": "6",
+      "APSAV1": "3",
+      "trabalhoAV2": "6",
+      "APSAV2": "2",
+      "trabalhoAV3": "2",
+      "updateTimestamp": "9/16/2020, 11:33:48 PM",
+      "finalGrade": "8.5",
+      "status": "aprovado"
     }
   ]
 }
