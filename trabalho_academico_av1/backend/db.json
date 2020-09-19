@@ -111,11 +111,11 @@
       "APSAV1": "1",
       "trabalhoAV2": "7",
       "APSAV2": "2",
-      "trabalhoAV3": "0",
+      "trabalhoAV3": "5",
       "id": "2020010007",
-      "status": "reprovado",
-      "updateTimestamp": "9/17/2020, 2:23:37 AM",
-      "finalGrade": "4.5"
+      "status": "aprovado",
+      "updateTimestamp": "9/19/2020, 4:27:35 AM",
+      "finalGrade": "7.0"
     }
   ]
 }

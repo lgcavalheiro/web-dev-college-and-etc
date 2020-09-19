@@ -34,7 +34,7 @@ function runParcel() {
 //gulp sucks at js
 function processJs() {
     return gulp.src('./parceled/*.js')
-        //.pipe(babel({ comments: false, presets: ["@babel/preset-env"] }))
+        //.pipe(babel({ comments: false, presets: ["@babel/preset-env"], plugins: ["@babel/plugin-transform-runtime"] }))
         //.pipe(terser())
         //.pipe(concat('index.js'))
         .pipe(gulp.dest('./public'))

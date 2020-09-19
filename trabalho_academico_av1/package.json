@@ -10,14 +10,16 @@
     "serve": "node backend/server.js",
     "y:go": "yarn purge && yarn build && yarn serve"
   },
-  "browserslist": [
-    "since 2017-06"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.11.2"
+  },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
