@@ -10,16 +10,19 @@
 </head>
 
 <body>
-    <h1>Sistema de Gerenciamento Acadêmico - SGA</h1>
-    <form action="/login" method="post" name="loginForm">
-        <label for="id">Id de acesso: </label>
-        <input type="text" name="id" id="id" required>
+    <h1>Sistema de Ensino Assíncrono Livre</h1>
+    <img src="../assets/seal.svg" id="logo"></img>
+    <div class="form-container">
+        <form action="/login" method="post" name="loginForm">
+            <label for="id">Id de acesso</label>
+            <input type="text" name="id" id="id" required>
 
-        <label for="password">Senha de acesso: </label>
-        <input type="password" name="password" id="password" required>
+            <label for="password">Senha de acesso</label>
+            <input type="password" name="password" id="password" required>
 
-        <input type="submit" value="Acessar">
-    </form>
+            <input type="submit" value="Acessar">
+        </form>
+    </div>
     <script src="../js/app-index.js"></script>
 </body>
 
