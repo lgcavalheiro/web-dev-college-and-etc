@@ -3,32 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
   "scripts": {
-    "purge": "rm -rf ./public/* ./parceled/*",
-    "dev": "parcel watch ./frontend/html/*.html --out-dir parceled --no-source-maps",
-    "build": "parcel build ./frontend/html/*.html --out-dir parceled --no-source-maps",
+    "purge": "rm -rf ./public/*",
+    "dev": "parcel watch ./frontend/html/*.html --out-dir public --no-source-maps",
+    "build": "parcel build ./frontend/html/*.html --out-dir public --no-source-maps",
     "serve": "node backend/server.js",
     "y:go": "yarn purge && yarn build && yarn serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@babel/runtime": "^7.11.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-transform-runtime": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-terser": "^1.4.0",
-    "gulp-uglifycss": "^1.1.0",
     "json-server": "^0.16.1",
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.10"
+    "sass": "^1.26.11"
   }
 }
