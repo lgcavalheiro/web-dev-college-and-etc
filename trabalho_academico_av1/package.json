@@ -11,7 +11,7 @@
     "dev": "parcel watch ./frontend/html/*.html --out-dir public --no-source-maps",
     "build": "parcel build ./frontend/html/*.html --out-dir public --no-source-maps",
     "serve": "node backend/server.js",
-    "y:go": "yarn purge && yarn build && yarn serve"
+    "go": "yarn purge && yarn build && yarn serve"
   },
   "keywords": [],
   "author": "",

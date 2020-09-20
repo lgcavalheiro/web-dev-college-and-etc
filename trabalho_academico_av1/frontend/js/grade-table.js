@@ -21,7 +21,7 @@ module.exports = function gradeTable(res) {
             </tr>
             <tr>
                 <th>Total</th>
-                <td colspan="3">${res.trabalhoAV3}</td>
+                <td colspan="3">${res.finalGrade}</td>
             </tr>
             <tr>
                 <th>Situação</th>

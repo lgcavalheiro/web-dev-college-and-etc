@@ -1,5 +1,5 @@
 const gradeTable = require('./grade-table');
-const studentForm = require('./student-form');
+const SF = require('./student-form');
 const coreUtils = require('./core-utils');
 
 document.body.onloadstart = coreUtils.testNavigation('professor', loadAllGrades);
@@ -17,13 +17,11 @@ function loadAllGrades() {
 
 function onSuccess(data) {
     allData = data;
-    document.getElementById('container').innerHTML = '';
+    document.getElementById('grades').innerHTML = '';
     data.forEach(d => {
-        document.getElementById('container').innerHTML += `
+        document.getElementById('grades').innerHTML += `
         <div id="${d.id}">
-            <h3>${d.id}</h3>
-            <button id="modal-btn" onclick="showModal(${d.id}, 'update')">Editar</button>
-            <button id="modal-btn" onclick="showModal('create')">Lançar nota</button>
+            ${injectButtons(d.id, d.name)}
             ${gradeTable(d)}
         </div>
         `
@@ -41,28 +39,34 @@ function loadStudentGrade(id) {
 }
 
 function onStudentGradeSuccess(d) {
+    let newData = allData.find(data => data.id === d.id);
+    allData[allData.indexOf(newData)] = d;
     document.getElementById(d.id).innerHTML = `
-        <h3>${d.id}</h3>
-        <button id="modal-btn" onclick="showModal(${d.id}, 'update')">Editar</button>
-        <button id="modal-btn" onclick="showModal('create')">Lançar nota</button>
+        ${injectButtons(d.id, d.name)}
         ${gradeTable(d)}
     `
 }
 
 window.showModal = function (id = "", mode) {
-    if (mode == 'update') injectStudentForm(id)
-    else injectGradeForm()
+    const modalLiterals = {
+        update: injectStudentForm,
+        createGrade: injectGradeForm,
+        createUser: injectCreateUserForm,
+        deleteGrade: deleteGrade
+    }
+
+    modalLiterals[mode](id)
 }
 
 window.hideModal = function () {
-    document.getElementById('modal').style.display = 'none';
+    document.getElementById('modal').hidden = true;
     document.querySelector('div[id=modal-content] div').innerHTML = '';
 }
 
 function injectStudentForm(id) {
     let data = allData.find(d => { return d.id === id.toString() });
-    document.getElementById('modal').style.display = 'block';
-    document.querySelector('div[id=modal-content] div').innerHTML += `${studentForm(data, '/grades', 'PUT', 'studentForm')}`;
+    document.getElementById('modal').hidden = false;
+    document.querySelector('div[id=modal-content] div').innerHTML += `${SF.studentForm(data, '/grades', 'PUT', 'studentForm')}`;
     document.studentForm.onsubmit = async (e) => {
         e.preventDefault();
         const data = new FormData(e.target);
@@ -86,8 +90,8 @@ function injectStudentForm(id) {
 }
 
 function injectGradeForm() {
-    document.getElementById('modal').style.display = 'block';
-    document.querySelector('div[id=modal-content] div').innerHTML += `${studentForm({}, '/grades', 'POST', 'gradeForm')}`;
+    document.getElementById('modal').hidden = false;
+    document.querySelector('div[id=modal-content] div').innerHTML += `${SF.studentForm({}, '/grades', 'POST', 'gradeForm')}`;
     document.gradeForm.onsubmit = async (e) => {
         e.preventDefault();
         const data = new FormData(e.target);
@@ -108,4 +112,89 @@ function injectGradeForm() {
             })
             .catch(e => alert(e))
     }
+}
+
+function injectCreateUserForm() {
+    document.getElementById('modal').hidden = false;
+    document.querySelector('div[id=modal-content] div').innerHTML += `${SF.createUserForm()}`;
+    document.createUser.onsubmit = async (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target);
+
+        data.set('role', 'aluno');
+        data.set('senha', data.get('name')[0] + '123');
+
+        const options = {
+            method: "post",
+            body: new URLSearchParams(data)
+        }
+
+        fetch(document.createUser.action, options)
+            .then(r => r.json())
+            .then(res => {
+                if (res.error) throw Error(res.error)
+                else {
+                    updateGradeOnUserCreation({ id: data.get('id'), name: data.get('name') });
+                }
+            })
+            .catch(e => alert(e))
+    }
+}
+
+function updateGradeOnUserCreation(data) {
+    data.trabalhoAV1 = "0";
+    data.trabalhoAV2 = "0";
+    data.trabalhoAV3 = "0";
+    data.APSAV1 = "0";
+    data.APSAV2 = "0";
+
+    const options = {
+        method: "post",
+        body: new URLSearchParams(data)
+    }
+
+    fetch('/grades', options)
+        .then(r => r.json())
+        .then(res => {
+            if (res.error) throw Error(res.error)
+            else {
+                alert("Aluno cadastrado com sucesso.");
+                loadAllGrades();
+                hideModal();
+            }
+        })
+        .catch(e => alert(e))
+}
+
+function injectButtons(id, name) {
+    return `
+        <h3>${name} - ${id}</h3>
+        <button id="modal-btn" onclick="showModal(${id}, 'update')">Editar</button>
+        <button id="modal-btn" onclick="showModal(null, 'createUser')">Cadastrar aluno</button>
+        <button id="modal-btn" onclick="showModal(${id}, 'deleteGrade')">Deletar nota</button>
+    `
+    // <button id="modal-btn" onclick="showModal(null, 'createGrade')">Lançar nota</button>
+}
+
+function deleteGrade(id) {
+    if (window.confirm(`Deletar notas para o aluno ${id} ?`)) {
+        const options = { method: 'delete' };
+        fetch(`/grades/${id}`, options)
+            .then(r => r.json())
+            .then(res => {
+                if (res.error) throw Error(res.error)
+                else {
+                    alert("Notas deletadas com sucesso.");
+                    loadAllGrades();
+                    hideModal();
+                }
+            })
+            .catch(e => alert(e))
+    }
+}
+
+window.switchTab = function (tab) {
+    let hide = tab == 'grades' ? 'dashboard' : 'grades';
+    document.getElementById(hide).hidden = true;
+    document.getElementById(tab).hidden = false;
 }

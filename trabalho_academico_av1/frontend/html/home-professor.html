@@ -7,12 +7,18 @@
     <title>Home - Professor</title>
     <link rel="stylesheet" href="../scss/home-professor.scss">
     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <h1>Home - Professor</h1>
-    <div id="container"></div>
-    <div id="modal">
+    <div class="navigation">
+        <button onclick="switchTab('grades')">Notas dos alunos</button>
+        <button onclick="switchTab('dashboard')">Dashboard</button>
+    </div>
+    <div id="grades"></div>
+    <div id="dashboard" hidden><h1>DASHBOARD</h1></div>
+    <div id="modal" hidden>
         <div id="modal-content">
             <span class="close-btn" onclick="hideModal()">&times;</span>
             <div></div>

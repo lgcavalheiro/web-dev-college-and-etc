@@ -17,6 +17,10 @@ server.use((req, res, next) => {
             let av2 = Number.parseFloat(req.body.trabalhoAV2) + Number.parseFloat(req.body.APSAV2);
             let av3 = Number.parseFloat(req.body.trabalhoAV3);
 
+            let username = require('./db.json')["users"];
+            username = username.find(user => user.id === req.body.id);
+            req.body.name = username != undefined ? username.name : '';
+
             let partialGrade = ((av1 + av2) / 2).toFixed(1);
             if(partialGrade >= 7.0) {
                 req.body.finalGrade = partialGrade;
@@ -50,5 +54,5 @@ server.post('/login', (req, res) => {
 
 server.use(router)
 server.listen(3001, () => {
-    console.log('JSON Server is running on port 3001')
+    console.log('JSON Server is running on http://localhost:3001')
 })
