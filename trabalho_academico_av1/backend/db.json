@@ -19,65 +19,24 @@
       "senha": "za333"
     },
     {
-      "id": "2019020002",
-      "name": "Caio Cardoso",
-      "role": "aluno",
-      "senha": "c123"
-    },
-    {
       "id": "2020010002",
-      "name": "Edgar Erinaldo",
+      "name": "Carol Cândido",
       "role": "aluno",
-      "senha": "e123",
-      "createdAt": 1600033063815
-    },
-    {
-      "id": "2020010003",
-      "name": "Fernanda Fuchs",
-      "role": "aluno",
-      "senha": "f123",
-      "updateTimestamp": "9/15/2020, 12:09:55 AM"
-    },
-    {
-      "id": "2020010005",
-      "name": "Geraldo Gustavo",
-      "role": "aluno",
-      "senha": "G123",
-      "updateTimestamp": "9/19/2020, 11:28:23 PM"
-    },
-    {
-      "id": "2020010009",
-      "name": "Hellen Hoith",
-      "role": "aluno",
-      "senha": "H123",
-      "updateTimestamp": "9/19/2020, 11:48:44 PM"
-    },
-    {
-      "id": "2020010010",
-      "name": "Isadora Irving",
-      "role": "aluno",
-      "senha": "I123",
-      "updateTimestamp": "9/20/2020, 1:12:59 AM"
-    },
-    {
-      "id": "2020010011",
-      "name": "Juliana James",
-      "role": "aluno",
-      "senha": "J123",
-      "updateTimestamp": "9/20/2020, 1:17:38 AM"
+      "senha": "C123",
+      "updateTimestamp": "9/21/2020, 12:03:02 AM"
     }
   ],
   "grades": [
     {
-      "trabalhoAV1": "7",
+      "trabalhoAV1": "4",
       "APSAV1": "2",
-      "trabalhoAV2": "3",
+      "trabalhoAV2": "1",
       "APSAV2": "2",
-      "trabalhoAV3": "1",
+      "trabalhoAV3": "8",
       "id": "2020010001",
       "status": "aprovado",
-      "updateTimestamp": "9/20/2020, 12:05:13 AM",
       "name": "Alan Almeida",
+      "updateTimestamp": "9/21/2020, 12:02:39 AM",
       "finalGrade": "7.0"
     },
     {
@@ -93,63 +52,15 @@
       "finalGrade": "6.5"
     },
     {
-      "trabalhoAV1": "3",
+      "trabalhoAV1": "4",
       "APSAV1": "3",
       "trabalhoAV2": "5",
       "APSAV2": "2",
-      "trabalhoAV3": "10",
-      "id": "2020010003",
+      "trabalhoAV3": "7",
+      "id": "2020010002",
       "status": "aprovado",
-      "updateTimestamp": "9/20/2020, 12:08:45 AM",
-      "name": "Fernanda Fuchs",
-      "finalGrade": "8.5"
-    },
-    {
-      "trabalhoAV1": "4",
-      "APSAV1": "2",
-      "trabalhoAV2": "6",
-      "APSAV2": "2",
-      "trabalhoAV3": "6",
-      "id": "2020010005",
-      "status": "aprovado",
-      "updateTimestamp": "9/20/2020, 12:24:11 AM",
-      "name": "Geraldo Gustavo",
-      "finalGrade": "7.0"
-    },
-    {
-      "trabalhoAV1": "4",
-      "APSAV1": "2",
-      "trabalhoAV2": "4",
-      "APSAV2": "2",
-      "trabalhoAV3": "2",
-      "id": "2020010009",
-      "status": "reprovado",
-      "updateTimestamp": "9/20/2020, 12:13:15 AM",
-      "name": "Hellen Hoith",
-      "finalGrade": "4.0"
-    },
-    {
-      "trabalhoAV1": "5",
-      "APSAV1": "2",
-      "trabalhoAV2": "3",
-      "APSAV2": "1",
-      "trabalhoAV3": "9",
-      "id": "2020010010",
-      "status": "aprovado",
-      "updateTimestamp": "9/20/2020, 1:14:51 AM",
-      "name": "Isadora Irving",
-      "finalGrade": "8.0"
-    },
-    {
-      "trabalhoAV1": "2",
-      "APSAV1": "2",
-      "trabalhoAV2": "0",
-      "APSAV2": "0",
-      "trabalhoAV3": "10",
-      "id": "2020010011",
-      "status": "aprovado",
-      "updateTimestamp": "9/20/2020, 1:21:11 AM",
-      "name": "Juliana James",
+      "name": "Carol Cândido",
+      "updateTimestamp": "9/21/2020, 12:03:16 AM",
       "finalGrade": "7.0"
     }
   ]

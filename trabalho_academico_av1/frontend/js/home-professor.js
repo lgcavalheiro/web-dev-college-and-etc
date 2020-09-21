@@ -54,7 +54,6 @@ window.showModal = function (id = "", mode) {
         createUser: injectCreateUserForm,
         deleteGrade: deleteGrade
     }
-
     modalLiterals[mode](id)
 }
 
@@ -64,10 +63,12 @@ window.hideModal = function () {
 }
 
 function injectStudentForm(id) {
-    let data = allData.find(d => { return d.id === id.toString() });
+    let data = allData.find(d => {
+        return d.id === id.toString()
+    });
     document.getElementById('modal').hidden = false;
     document.querySelector('div[id=modal-content] div').innerHTML += `${SF.studentForm(data, '/grades', 'PUT', 'studentForm')}`;
-    document.studentForm.onsubmit = async (e) => {
+    document.studentForm.onsubmit = async(e) => {
         e.preventDefault();
         const data = new FormData(e.target);
         const options = {
@@ -92,7 +93,7 @@ function injectStudentForm(id) {
 function injectGradeForm() {
     document.getElementById('modal').hidden = false;
     document.querySelector('div[id=modal-content] div').innerHTML += `${SF.studentForm({}, '/grades', 'POST', 'gradeForm')}`;
-    document.gradeForm.onsubmit = async (e) => {
+    document.gradeForm.onsubmit = async(e) => {
         e.preventDefault();
         const data = new FormData(e.target);
         const options = {
@@ -117,7 +118,7 @@ function injectGradeForm() {
 function injectCreateUserForm() {
     document.getElementById('modal').hidden = false;
     document.querySelector('div[id=modal-content] div').innerHTML += `${SF.createUserForm()}`;
-    document.createUser.onsubmit = async (e) => {
+    document.createUser.onsubmit = async(e) => {
         e.preventDefault();
         const data = new FormData(e.target);
 
@@ -129,15 +130,20 @@ function injectCreateUserForm() {
             body: new URLSearchParams(data)
         }
 
-        fetch(document.createUser.action, options)
-            .then(r => r.json())
-            .then(res => {
-                if (res.error) throw Error(res.error)
-                else {
-                    updateGradeOnUserCreation({ id: data.get('id'), name: data.get('name') });
-                }
+        Promise.all([
+            fetch(document.createUser.action, options),
+            updateGradeOnUserCreation({
+                id: data.get('id'),
+                name: data.get('name')
             })
-            .catch(e => alert(e))
+        ]).then(res => {
+            if (res.error) throw Error(res.error)
+            else {
+                alert("Aluno cadastrado com sucesso.");
+                loadAllGrades();
+                hideModal();
+            }
+        }).catch(e => alert(e))
     }
 }
 
@@ -153,17 +159,7 @@ function updateGradeOnUserCreation(data) {
         body: new URLSearchParams(data)
     }
 
-    fetch('/grades', options)
-        .then(r => r.json())
-        .then(res => {
-            if (res.error) throw Error(res.error)
-            else {
-                alert("Aluno cadastrado com sucesso.");
-                loadAllGrades();
-                hideModal();
-            }
-        })
-        .catch(e => alert(e))
+    fetch('/grades', options);
 }
 
 function injectButtons(id, name) {
@@ -173,23 +169,23 @@ function injectButtons(id, name) {
         <button id="modal-btn" onclick="showModal(null, 'createUser')">Cadastrar aluno</button>
         <button id="modal-btn" onclick="showModal(${id}, 'deleteGrade')">Deletar nota</button>
     `
-    // <button id="modal-btn" onclick="showModal(null, 'createGrade')">Lançar nota</button>
 }
 
 function deleteGrade(id) {
     if (window.confirm(`Deletar notas para o aluno ${id} ?`)) {
-        const options = { method: 'delete' };
-        fetch(`/grades/${id}`, options)
-            .then(r => r.json())
-            .then(res => {
-                if (res.error) throw Error(res.error)
-                else {
-                    alert("Notas deletadas com sucesso.");
-                    loadAllGrades();
-                    hideModal();
-                }
-            })
-            .catch(e => alert(e))
+        const options = {
+            method: 'delete'
+        };
+        Promise.all([
+            fetch(`/grades/${id}`, options),
+            fetch(`/users/${id}`, options)
+        ]).then(res => {
+            if (res.error) throw Error(res.error)
+            else {
+                alert("Notas deletadas com sucesso.");
+                loadAllGrades();
+            }
+        }).catch(e => alert(e))
     }
 }
 

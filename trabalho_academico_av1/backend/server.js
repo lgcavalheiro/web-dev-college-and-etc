@@ -17,18 +17,14 @@ server.use((req, res, next) => {
             let av2 = Number.parseFloat(req.body.trabalhoAV2) + Number.parseFloat(req.body.APSAV2);
             let av3 = Number.parseFloat(req.body.trabalhoAV3);
 
-            let username = require('./db.json')["users"];
-            username = username.find(user => user.id === req.body.id);
-            req.body.name = username != undefined ? username.name : '';
-
             let partialGrade = ((av1 + av2) / 2).toFixed(1);
-            if(partialGrade >= 7.0) {
+            if (partialGrade >= 7.0) {
                 req.body.finalGrade = partialGrade;
                 req.body.status = 'aprovado';
             } else {
                 let maxAv = av1 > av2 ? av1 : av2;
                 partialGrade = ((maxAv + av3) / 2).toFixed(1);
-                if(partialGrade >= 7.0) {
+                if (partialGrade >= 7.0) {
                     req.body.finalGrade = partialGrade;
                     req.body.status = 'aprovado';
                 } else {
@@ -44,12 +40,18 @@ server.use((req, res, next) => {
 server.post('/login', (req, res) => {
     if (req.body.password && req.body.id) {
         let isAuth = auth.authenticate(req.body.id, req.body.password);
-        if (isAuth) res.status(200).jsonp({ role: isAuth.role, name: isAuth.name, id: isAuth.id })
-        else res.status(401).jsonp(
-            { error: "Id e/ou senha não conferem, verifique suas credenciais e tente novamente." }
-        )
+        if (isAuth) res.status(200).jsonp({
+            role: isAuth.role,
+            name: isAuth.name,
+            id: isAuth.id
+        })
+        else res.status(401).jsonp({
+            error: "Id e/ou senha não conferem, verifique suas credenciais e tente novamente."
+        })
     } else
-        res.status(401).jsonp({ error: "Credenciais inválidas ou incompletas." })
+        res.status(401).jsonp({
+            error: "Credenciais inválidas ou incompletas."
+        })
 })
 
 server.use(router)

@@ -38,7 +38,7 @@ function studentForm(data = {}, action, method, name) {
                 </label>
 
                 ${name == 'studentForm'
-            ? `<input type="hidden" name="id" value="${data.id}"><input type="hidden" name="status" value="${data.status}">`
+            ? `<input type="hidden" name="id" value="${data.id}"><input type="hidden" name="status" value="${data.status}"><input type="hidden" name="name" value="${data.name}">`
             : ''
         }
                 
