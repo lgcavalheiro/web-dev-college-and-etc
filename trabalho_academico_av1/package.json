@@ -7,7 +7,7 @@
     "last 1 Chrome versions"
   ],
   "scripts": {
-    "purge": "rm -rf ./public/*",
+    "purge": "shx rm -rf ./public/*",
     "dev": "parcel watch ./frontend/html/*.html --out-dir public --no-source-maps",
     "build": "parcel build ./frontend/html/*.html --out-dir public --no-source-maps",
     "serve": "node backend/server.js",
@@ -18,8 +18,10 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "gulp": "^4.0.2",
     "json-server": "^0.16.1",
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.11"
+    "sass": "^1.26.11",
+    "shx": "^0.3.2"
   }
 }
