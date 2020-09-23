@@ -3,6 +3,7 @@ const SF = require('./student-form');
 const coreUtils = require('./core-utils');
 
 document.body.onloadstart = coreUtils.testNavigation('professor', loadAllGrades);
+document.body.onloadstart = document.getElementById('dashboard').innerHTML += '<h2>YAYAYAY</h2>'
 let allData = undefined;
 
 function loadAllGrades() {
