@@ -32,12 +32,12 @@
       "APSAV1": "2",
       "trabalhoAV2": "1",
       "APSAV2": "2",
-      "trabalhoAV3": "8",
+      "trabalhoAV3": "5",
       "id": "2020010001",
-      "status": "aprovado",
+      "status": "reprovado",
       "name": "Alan Almeida",
-      "updateTimestamp": "9/21/2020, 11:35:30 PM",
-      "finalGrade": "7.0"
+      "updateTimestamp": "9/22/2020, 10:00:49 PM",
+      "finalGrade": "5.5"
     },
     {
       "trabalhoAV1": "6",

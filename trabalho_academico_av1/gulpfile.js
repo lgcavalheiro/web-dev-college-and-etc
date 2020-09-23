@@ -21,7 +21,7 @@ function purge() {
 }
 
 function bundle() {
-    return exec('parcel build ./frontend/html/*.html --out-dir public --no-source-maps');
+    return exec('parcel build --experimental-scope-hoisting ./frontend/html/*.html --out-dir public --no-source-maps');
 }
 
 function serve() {
