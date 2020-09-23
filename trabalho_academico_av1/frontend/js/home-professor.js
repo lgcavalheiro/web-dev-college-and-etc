@@ -1,9 +1,9 @@
 const gradeTable = require('./grade-table');
 const SF = require('./student-form');
 const coreUtils = require('./core-utils');
+const GR = require('./graphs');
 
 document.body.onloadstart = coreUtils.testNavigation('professor', loadAllGrades);
-document.body.onloadstart = document.getElementById('dashboard').innerHTML += '<h2>YAYAYAY</h2>'
 let allData = undefined;
 
 function loadAllGrades() {
@@ -194,4 +194,5 @@ window.switchTab = function (tab) {
     let hide = tab == 'grades' ? 'dashboard' : 'grades';
     document.getElementById(hide).hidden = true;
     document.getElementById(tab).hidden = false;
+    GR.activateCharts(allData);
 }

@@ -1,41 +1,81 @@
-var Chart = require('chart.js');
+module.exports = {
+  activateCharts(data) {
+    window.chartData = data.sort((a, b) => {
+      return b.trabalhoAV1 - a.trabalhoAV1;
+    });
+    generalGrades();
+  },
+};
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
+window.sortData = function () {
+  window.chartData = window.chartData.sort((a, b) => {
+    return a.trabalhoAV1 - b.trabalhoAV1;
+  });
+  console.log(window.chartData);
+  generalGrades();
+};
+
+function generalGrades() {
+  var ctx = document.getElementById("general").getContext("2d");
+  var generalChart = new Chart(ctx, {
+    type: "bar",
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
+      labels: window.chartData.map((d) => {
+        return d.name;
+      }),
+      datasets: [
+        {
+          label: "Nota Trabalho AV1",
+          data: window.chartData.map((d) => {
+            return d.trabalhoAV1;
+          }),
+          backgroundColor: "#caf270",
+        },
+        {
+          label: "Nota APS AV1",
+          data: window.chartData.map((d) => {
+            return d.APSAV1;
+          }),
+          backgroundColor: "#c062ff",
+        },
+        {
+          label: "Nota Trabalho AV2",
+          data: window.chartData.map((d) => {
+            return d.trabalhoAV2;
+          }),
+          backgroundColor: "#caf270",
+        },
+        {
+          label: "Nota APS AV2",
+          data: window.chartData.map((d) => {
+            return d.APSAV2;
+          }),
+          backgroundColor: "#c062ff",
+        },
+        {
+          label: "Nota Trabalho AV3",
+          data: window.chartData.map((d) => {
+            return d.trabalhoAV3;
+          }),
+          backgroundColor: "#caf270",
+        },
+      ],
     },
     options: {
-        //responsive: false,
-        maintainAspectRatio: false,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+      title: {
+        display: true,
+        text: 'Notas'
+      },
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+}

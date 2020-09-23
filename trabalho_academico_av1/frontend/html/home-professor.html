@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Professor</title>
-    <link rel="stylesheet" href="../scss/home-professor.scss">
-    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-   
-</head>
+    <link rel="stylesheet" href="../scss/home-professor.scss" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+  </head>
 
-<body>
+  <!-- integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q=="
+  crossorigin="anonymous" -->
+
+  <body>
     <h1>Home - Professor</h1>
     <div class="navigation">
-        <button onclick="switchTab('grades')">Notas dos alunos</button>
-        <button onclick="switchTab('dashboard')">Dashboard</button>
+      <button onclick="switchTab('grades')">Notas dos alunos</button>
+      <button onclick="switchTab('dashboard')">Dashboard</button>
     </div>
     <div id="grades"></div>
     <div id="dashboard" hidden>
-        <div style="width: 60vw; height: 40vh;">
-            <canvas id="myChart" width="400" height="400"></canvas>
-        </div>
-        
+      <div class="chart-wrapper">
+        <canvas id="general"></canvas>
+      </div>
     </div>
     <div id="modal" hidden>
-        <div id="modal-content">
-            <span class="close-btn" onclick="hideModal()">&times;</span>
-            <div></div>
-        </div>
+      <div id="modal-content">
+        <span class="close-btn" onclick="hideModal()">&times;</span>
+        <div></div>
+      </div>
     </div>
     <script src="../js/home-professor.js"></script>
     <script src="../js/graphs.js"></script>
-</body>
-
+  </body>
 </html>

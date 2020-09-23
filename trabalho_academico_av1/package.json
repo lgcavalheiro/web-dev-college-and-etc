@@ -11,14 +11,13 @@
     "dev": "parcel watch ./frontend/html/*.html --out-dir public --no-source-maps",
     "build": "parcel build ./frontend/html/*.html --out-dir public --no-source-maps",
     "serve": "node backend/server.js",
-    "go": "yarn purge && yarn build && yarn serve"
+    "go": "yarn purge && yarn build && yarn serve",
+    "gulp": "gulp"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chart.js": "^2.9.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^4.0.2",
     "json-server": "^0.16.1",
