@@ -1,17 +1,16 @@
+const Chart = require("chart.js");
 const CALC = require("./calculations");
+const { inspectedGradeTable } = require('./grade-table');
+import "chartjs-chart-box-and-violin-plot/build/Chart.BoxPlot.js";
 
 module.exports = {
   activateCharts(data) {
     window.chartData = data;
     standardDeviation();
+    boxplot();
+    histogram();
+    document.getElementById('grade-table').innerHTML = inspectedGradeTable(window.chartData);
   },
-};
-
-window.sortData = function () {
-  window.chartData = window.chartData.sort((a, b) => {
-    return a.trabalhoAV1 - b.trabalhoAV1;
-  });
-  standardDeviation();
 };
 
 function standardDeviation() {
@@ -28,7 +27,7 @@ function standardDeviation() {
           data: [
             {
               x: 0,
-              y: CALC.variancia(
+              y: CALC.desvio(
                 window.chartData.map((d) => {
                   return parseInt(d.trabalhoAV1);
                 })
@@ -36,7 +35,7 @@ function standardDeviation() {
             },
             {
               x: 0.5,
-              y: CALC.variancia(
+              y: CALC.desvio(
                 window.chartData.map((d) => {
                   return parseInt(d.APSAV1);
                 })
@@ -44,7 +43,7 @@ function standardDeviation() {
             },
             {
               x: 1,
-              y: CALC.variancia(
+              y: CALC.desvio(
                 window.chartData.map((d) => {
                   return parseInt(d.trabalhoAV2);
                 })
@@ -52,7 +51,7 @@ function standardDeviation() {
             },
             {
               x: 1.5,
-              y: CALC.variancia(
+              y: CALC.desvio(
                 window.chartData.map((d) => {
                   return parseInt(d.APSAV2);
                 })
@@ -60,7 +59,7 @@ function standardDeviation() {
             },
             {
               x: 2,
-              y: CALC.variancia(
+              y: CALC.desvio(
                 window.chartData.map((d) => {
                   return parseInt(d.trabalhoAV3);
                 })
@@ -78,7 +77,7 @@ function standardDeviation() {
             return { x: (i / window.chartData.length) * 2, y: d.trabalhoAV1 };
           }),
           pointStyle: "triangle",
-          pointRadius: 8
+          pointRadius: 8,
         },
         {
           label: "APS AV1",
@@ -88,7 +87,7 @@ function standardDeviation() {
             return { x: (i / window.chartData.length) * 2, y: d.APSAV1 };
           }),
           pointStyle: "triangle",
-          pointRadius: 8
+          pointRadius: 8,
         },
         {
           label: "Trabalho AV2",
@@ -98,7 +97,7 @@ function standardDeviation() {
             return { x: (i / window.chartData.length) * 2, y: d.trabalhoAV2 };
           }),
           pointStyle: "triangle",
-          pointRadius: 8
+          pointRadius: 8,
         },
         {
           label: "APS AV2",
@@ -108,7 +107,7 @@ function standardDeviation() {
             return { x: (i / window.chartData.length) * 2, y: d.APSAV2 };
           }),
           pointStyle: "triangle",
-          pointRadius: 8
+          pointRadius: 8,
         },
         {
           label: "Trabalho AV3",
@@ -118,7 +117,7 @@ function standardDeviation() {
             return { x: (i / window.chartData.length) * 2, y: d.trabalhoAV3 };
           }),
           pointStyle: "triangle",
-          pointRadius: 8
+          pointRadius: 8,
         },
       ],
     },
@@ -160,6 +159,84 @@ function standardDeviation() {
         },
       },
       scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+}
+
+function boxplot() {
+  let ctx = document.getElementById("boxplot-chart").getContext("2d");
+  let boxplot = new Chart(ctx, {
+    type: "boxplot",
+    data: {
+      labels: [
+        "Trabalho AV1",
+        "APS AV1",
+        "Trabalho AV2",
+        "APS AV2",
+        "Trabalho AV3",
+      ],
+      datasets: CALC.boxplotData(window.chartData),
+    },
+    options: {
+      responsive: true,
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Quartis das notas",
+      },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+}
+
+function histogram() {
+  var ctx = document.getElementById("histogram").getContext("2d");
+  var histogramChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["0-2", "3-5", "6-8", "9-10"],
+      datasets: CALC.histogramData(window.chartData),
+    },
+    options: {
+      title: {
+        display: true,
+        text: "Histograma de notas",
+      },
+      scales: {
+        xAxes: [
+          {
+            display: false,
+            barPercentage: 1.3,
+            ticks: {
+              max: 3,
+            },
+          },
+          {
+            display: true,
+            ticks: {
+              autoSkip: false,
+              max: 4,
+            },
+          },
+        ],
         yAxes: [
           {
             ticks: {

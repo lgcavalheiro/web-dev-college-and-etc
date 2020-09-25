@@ -1,4 +1,4 @@
-const gradeTable = require('./grade-table');
+const { gradeTable } = require('./grade-table');
 const SF = require('./student-form');
 const coreUtils = require('./core-utils');
 const GR = require('./graphs');

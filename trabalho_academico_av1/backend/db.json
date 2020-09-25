@@ -59,24 +59,24 @@
       "trabalhoAV1": "1",
       "APSAV1": "2",
       "trabalhoAV2": "7",
-      "APSAV2": "2",
+      "APSAV2": "0",
       "trabalhoAV3": "8",
       "id": "2020010001",
       "status": "aprovado",
       "name": "Alan Almeida",
-      "updateTimestamp": "9/24/2020, 1:38:03 AM",
-      "finalGrade": "8.5"
+      "updateTimestamp": "9/24/2020, 11:21:25 PM",
+      "finalGrade": "7.5"
     },
     {
       "trabalhoAV1": "6",
       "APSAV1": "1",
       "trabalhoAV2": "3",
-      "APSAV2": "2",
+      "APSAV2": "0",
       "trabalhoAV3": "6",
       "id": "2019020001",
       "status": "reprovado",
-      "updateTimestamp": "9/20/2020, 12:08:32 AM",
       "name": "Bernardo Bosch",
+      "updateTimestamp": "9/24/2020, 11:21:45 PM",
       "finalGrade": "6.5"
     },
     {

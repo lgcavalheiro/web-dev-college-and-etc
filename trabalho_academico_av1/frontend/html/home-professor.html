@@ -10,12 +10,7 @@
       href="../assets/favicon.ico"
       type="image/x-icon"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
   </head>
-
-  <!-- integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q=="
-  crossorigin="anonymous" -->
-
   <body>
     <h1>Home - Professor</h1>
     <div class="navigation">
@@ -27,6 +22,13 @@
       <div class="chart-wrapper">
         <canvas id="deviation"></canvas>
       </div>
+      <div class="chart-wrapper">
+        <canvas id="boxplot-chart"></canvas>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="histogram"></canvas>
+      </div>
+      <div id="grade-table"></div>
     </div>
     <div id="modal" hidden>
       <div id="modal-content">
@@ -35,6 +37,5 @@
       </div>
     </div>
     <script src="../js/home-professor.js"></script>
-    <script src="../js/graphs.js"></script>
   </body>
 </html>

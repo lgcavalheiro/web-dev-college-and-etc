@@ -1,4 +1,4 @@
-const gradeTable = require('./grade-table');
+const { gradeTable } = require('./grade-table');
 const coreUtils = require('./core-utils');
 
 document.body.onloadstart = coreUtils.testNavigation('aluno', loadStudentData);
