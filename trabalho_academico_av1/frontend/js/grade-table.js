@@ -2,7 +2,7 @@ const CALC = require("./calculations");
 
 module.exports.gradeTable = function (res) {
   return `
-    <table style="border: 1px solid black;">
+    <table>
         <thead>
             <th></th>
             <th>AV1</th>
@@ -30,6 +30,11 @@ module.exports.gradeTable = function (res) {
                 <td colspan="3">${res.status}</td>
             </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4"><i>Última atualização em ${res.updateTimestamp}</i></td>
+          </tr>
+        </foot>
     </table>
     `;
 };
@@ -76,7 +81,7 @@ module.exports.inspectedGradeTable = function (data) {
     });
 
   return `
-    <table style="border: 1px solid black;">
+    <table>
         <thead>
             <th></th>
             <th>AV1</th>

@@ -56,39 +56,39 @@
   ],
   "grades": [
     {
-      "trabalhoAV1": "1",
-      "APSAV1": "2",
-      "trabalhoAV2": "7",
-      "APSAV2": "0",
-      "trabalhoAV3": "8",
+      "trabalhoAV1": "4.2",
+      "APSAV1": "2.5",
+      "trabalhoAV2": "7.1",
+      "APSAV2": "0.5",
+      "trabalhoAV3": "6.7",
       "id": "2020010001",
       "status": "aprovado",
       "name": "Alan Almeida",
-      "updateTimestamp": "9/24/2020, 11:21:25 PM",
-      "finalGrade": "7.5"
+      "updateTimestamp": "9/26/2020, 2:44:41 AM",
+      "finalGrade": "7.2"
     },
     {
-      "trabalhoAV1": "6",
-      "APSAV1": "1",
-      "trabalhoAV2": "3",
-      "APSAV2": "0",
-      "trabalhoAV3": "6",
+      "trabalhoAV1": "6.5",
+      "APSAV1": "1.6",
+      "trabalhoAV2": "3.8",
+      "APSAV2": "1.2",
+      "trabalhoAV3": "5.5",
       "id": "2019020001",
       "status": "reprovado",
       "name": "Bernardo Bosch",
-      "updateTimestamp": "9/24/2020, 11:21:45 PM",
-      "finalGrade": "6.5"
+      "updateTimestamp": "9/26/2020, 2:46:09 AM",
+      "finalGrade": "6.8"
     },
     {
       "trabalhoAV1": "4",
-      "APSAV1": "3",
-      "trabalhoAV2": "5",
-      "APSAV2": "2",
+      "APSAV1": "2.5",
+      "trabalhoAV2": "5.5",
+      "APSAV2": "1.5",
       "trabalhoAV3": "7",
       "id": "2020010002",
       "status": "aprovado",
       "name": "Carol Cândido",
-      "updateTimestamp": "9/21/2020, 12:03:16 AM",
+      "updateTimestamp": "9/26/2020, 2:46:27 AM",
       "finalGrade": "7.0"
     },
     {

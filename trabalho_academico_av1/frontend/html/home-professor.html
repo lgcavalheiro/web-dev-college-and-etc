@@ -12,13 +12,22 @@
     />
   </head>
   <body>
-    <h1>Home - Professor</h1>
-    <div class="navigation">
-      <button onclick="switchTab('grades')">Notas dos alunos</button>
-      <button onclick="switchTab('dashboard')">Dashboard</button>
+    <nav>
+      <span id="user-info"></span>
+      <div id="navigation-professor">
+        <button onclick="switchTab('grades-wrapper')">Notas dos alunos</button>
+        <button onclick="switchTab('dashboard')">Dashboard</button>
+      </div>
+      <a href="/">Sair &DoubleRightArrow;</a>
+    </nav>
+    <div id="grades-wrapper">
+      <button id="modal-btn" onclick="showModal(null, 'createUser')">
+        Cadastrar aluno
+      </button>
+      <div id="grades"></div>
     </div>
-    <div id="grades"></div>
     <div id="dashboard" hidden>
+      <div id="grade-table"></div>
       <div class="chart-wrapper">
         <canvas id="deviation"></canvas>
       </div>
@@ -28,7 +37,6 @@
       <div class="chart-wrapper">
         <canvas id="histogram"></canvas>
       </div>
-      <div id="grade-table"></div>
     </div>
     <div id="modal" hidden>
       <div id="modal-content">

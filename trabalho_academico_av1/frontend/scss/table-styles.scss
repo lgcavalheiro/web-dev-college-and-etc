@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+table,
+th,
+td {
+  border: 1px solid $black;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}

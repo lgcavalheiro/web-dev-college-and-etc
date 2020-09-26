@@ -1,18 +1,10 @@
+@import "./index.scss";
+@import "./table-styles.scss";
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   line-height: 1.6;
-}
-
-button {
-  background: coral;
-  padding: 1em 2em;
-  color: #e6e6e6;
-  border: 0;
-}
-
-button:hover {
-  background: #333;
 }
 
 #modal {
@@ -23,28 +15,29 @@ button:hover {
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: transparentize($black, 0.6);
 }
 
 #modal-content {
-  background-color: #f4f4f4;
+  background-color: $white;
   margin: 20% auto;
   padding: 20px;
   width: 70%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 8px 0 $black, 0 7px 20px 0 $black;
+  display: grid;
 }
 
 .close-btn {
-  float: right;
-  color: #ccc;
+  justify-self: end;
+  color: darken($white, 40);
   font-size: 32px;
-}
 
-.close-btn:hover,
-.close-btn:focus {
-  color: #131313;
-  text-decoration: none;
-  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .chart-wrapper {
@@ -54,10 +47,85 @@ button:hover {
 }
 
 #dashboard {
-    display: grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
+  margin: 1em auto;
+  row-gap: 1em;
 }
 
 [hidden] {
-    display: none !important;
+  display: none !important;
+}
+
+#navigation-professor {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+#grades-wrapper {
+  margin: 2em auto;
+}
+
+#grades {
+  display: grid;
+  margin: 2em auto;
+  gap: 1.6em;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: 620px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+#grade-table {
+  justify-self: center;
+}
+
+.card-aluno-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  row-gap: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+.card-aluno {
+  background-color: $green;
+  padding: 1em;
+  border-radius: 16px;
+  box-shadow: 0 5px 8px 0 $black, 0 7px 20px 0 $black;
+}
+
+form[name="studentForm"] {
+  display: grid;
+  justify-content: center;
+  gap: 0.6em;
+}
+
+.AV1,
+.AV2 {
+  display: flex;
+  gap: 0.6em;
+}
+
+label[for="trabalhoAV3"] {
+  justify-self: flex-start;
+}
+
+form[name="createUser"] {
+  display: grid;
+  grid-auto-columns: min-content;
+  justify-content: center;
+  gap: 0.6em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: $green;
+  margin: -0.5em;
+  padding: 0.6em 0.4em;
 }
