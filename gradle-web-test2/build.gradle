@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'com.github.sahara3.tomcat-runner' version '0.2.1'
+}
+
+group = 'com.example'
+version = '0.0.1'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+
+    testCompile 'junit:junit:4.12'
+}
+
+tomcat {
+    version = 9.0
+    port = 8080
+
+    webapp file('build/libs/app.war') 
+}
