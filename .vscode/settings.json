@@ -1,0 +1,6 @@
+{
+  "java.externalDependencies": [
+    "junit:junit:4.12",
+    "javax.servlet:javax.servlet-api:4.0.1"
+  ]
+}
